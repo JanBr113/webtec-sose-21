@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <section class="container">
+            <div id="logo">
+                <a href="startseite.html">
+                    <img alt="Logo" src="../img/logoV1.png">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <a href="startseite.html"><i class="fa fa-fw fa-home"></i> Startseite</a>
+                <a href="kontakt.html"><i class="fa fa-fw fa-envelope"></i> Kontakt</a>
+                <a href="impressum.html"><i class="fa fa-fw fa-user"></i> Impressum</a>
+                <a class="active" href="warenkorb.html"><i class="fas fa-shopping-cart"></i>
+                    Warenkorb</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <h1>Warenkorb</h1>
+        <table class="container">
+            <thead>
+                <tr>
+                    <th style="width:20%">Bild</th>
+                    <th>Produkt</th>
+                    <th>Menge</th>
+                    <th>Stückpreis</th>
+                    <th>Gesamtpreis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <figure>
+                            <a href="produkt1.html">
+                                <img src="../img/bambookeys_keyboard_and_mouse.png" alt="Maus und Tastatur" style="width:100%">
+                            </a>
+                        </figure>
+                    </td>
+                    <td class="product-title"><a href="produkt1.html">BAMBOOKEYS Tastatur + Maus</a></td>
+                    <td>
+                        <input type="number" size="2" value="1">
+                        <a>
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                    <td class="product-price">98,99 €</td>
+                    <td class="product-price">98,99 €</td>
+                </tr>
+                <tr>
+                    <td>
+                        <figure>
+                            <a href="produkt2.html">
+                                <img src="../img/bambookeys_calculator.png" alt="Taschenrechner" style="width:100%">
+                            </a>
+                        </figure>
+                    </td>
+                    <td class="product-title"><a href="produkt2.html">BAMBOOKEYS Taschenrechner</a></td>
+                    <td>
+                        <input type="number" size="2" value="1">
+                        <a>
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </td>
+                    <td class="product-price">44,99 €</td>
+                    <td class="product-price">44,99 €</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"></td>
+                    <td>
+                        <h2>Summe:</h2>
+                    </td>
+                    <td class="product-price">143,98 €</td>
+                </tr>
+                <tr>
+                    <td colspan="5"><button type="button" class="warenkorb-button">Jetzt Kaufen</button></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+        <p>© Raphael Sacher, Jan-Niclas Bracht – 2021</p>
+    </footer>
+</body>
+
+</html>

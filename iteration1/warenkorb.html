@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <a href="uebersicht.html">
+                    <img alt="Logo" src="../img/logoV1.png">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <ul>
+                    <li class="current"><a href="uebersicht.html">Übersicht</a></li>
+                    <li><a href="produkte.html">Produkte</a></li>
+                    <li><a href="nachhatligkeit.html">Nachhaltigkeit</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li>
+                        <a id="warenkorb" href="warenkorb.html">
+                            <i class="fas fa-shopping-cart"></i> Warenkorb
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <h1>Warenkorb</h1>
+
+    <table class="card">
+        <caption>Mein Einkauf</caption>
+        <thead>
+            <tr>
+                <th>Bild</th>
+                <th>Produkt</th>
+                <th>Stückpreis</th>
+                <th>Menge</th>
+                <th>Gesamtpreis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="produkt1.html">
+                        <img alt="Maus und Tastatur" src="../img/bambookeys_keyboard_and_mouse.png" style="width:100%">
+                    </a>
+                </td>
+                <td class="product-title"><a href="produkt1.html">Produkt 1</a></td>
+                <td>
+                    <input type="number" size="2" value="2">
+                    <a>
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+                <td class="product-price">X €</td>
+                <td class="product-price">X €</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="produkt2.html">
+                        <img alt="Taschenrechner" src="../img/bambookeys_calculator.png" style="width:100%">
+                    </a>
+                </td>
+                <td class="product-title"><a href="produkt2.html">Produkt 2</a></td>
+                <td>
+                    <input type="number" size="2" value="2">
+                    <a>
+                        <i class="fas fa-trash-alt"></i>
+                    </a>
+                </td>
+                <td class="product-price">X €</td>
+                <td class="product-price">X €</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Summe:</td>
+                <td class="product-price">X €</td>
+            </tr>
+            <tr>
+                <td colspan="5"><button type="button" class="warenkorb-button">Jetzt Kaufen</button></td>
+            </tr>
+        </tfoot>
+    </table>
+    <footer>
+        <p>BAMBOOKEYS Online Shop 2021</p>
+    </footer>
+</body>
+
+</html>

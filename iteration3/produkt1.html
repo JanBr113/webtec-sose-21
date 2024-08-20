@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Produkt 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/zumWarenkorbHinzufuegen.js"></script>
+</head>
+
+<body onload="istMaximaleAnzahlErreicht(produkt)">
+    <header>
+        <section class="container">
+            <div id="logo">
+                <a href="startseite.html">
+                    <img alt="Logo" src="../img/logoV2.png" style="width:50%">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <a href="startseite.html"><i class="fa fa-fw fa-home"></i> Startseite</a>
+                <a href="kontakt.html"><i class="fa fa-fw fa-envelope"></i> Kontakt</a>
+                <a href="impressum.html"><i class="fa fa-fw fa-user"></i> Impressum</a>
+                <a href="warenkorb.html"><i class="fas fa-shopping-cart"></i> Warenkorb</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="product-page">
+            <h1>Produktdetails</h1>
+            <div class="card-wrapper">
+                <div class="productdetail-card">
+                    <!--Produkt Bild-->
+                    <figure>
+                        <div class="product-picture">
+                            <img src="../img/bambookeys_keyboard.png" alt="BambooKeys Tastatur" style="width:100%">
+                        </div>
+                    </figure>
+                    <div class="product-content">
+                        <!--Titel-->
+                        <h2 class="product-title">BAMBOOKEYS Tastatur</h2>
+                        <!--Bewertung-->
+                        <div class="product-rating">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                        </div>
+                        <!--Preis-->
+                        <p class="old-product-price">119,99 €</p>
+                        <p class="product-price">98,99 €</p>
+                        <!--Beschreibung-->
+                        <div class="product-detail">
+                            <h2>Artikel Infos: </h2>
+                            <p>Produktbeschreibung...</p>
+                            <p class="product-nachhaltigkeit">Mit dem Kauf dieses Produktes sparen Sie <span>2kg</span> CO2!
+                            </p>
+                            <ul>
+                                <li>Hersteller: <span>Bamboo Keys</span></li>
+                                <li>Marke: <span>Bamboo Keys</span></li>
+                                <li>Lieferdienst: <span>DHL</span></li>
+                                <li>Lieferung: <span>innerhalb 3 Tage</span></li>
+                                <li>Verfügbarkeit: <span>Auf Lager</span></li>
+                            </ul>
+                            <p>Anzahl: <input id="anzahl" type="number" size="2" value="1"></p>
+                        </div>
+                        <!--In den Warenkorb Button-->
+                        <button type="button" id="warenkorb-btn" class="warenkorb-button">In den Warenkorb</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container">
+            <form method="POST" action="verarbeite-kontakt.html">
+                <fieldset>
+                    <label for="bewertung">Bewertung</label>
+                    <select name="Bewertung" id="bewertung" size="1">
+                        <option value="keine_Auswahl">-- Bitte wählen --</option>
+                        <option value="1">
+                            1 Stern
+                        </option>
+                        <option value="2">
+                            2 Sterne
+                        </option>
+                        <option value="3">
+                            3 Sterne
+                        </option>
+                        <option value="4">
+                            4 Sterne
+                        </option>
+                        <option value="5">
+                            5 Sterne
+                        </option>
+                    </select>
+                    <span id="displayChars"></span>
+                    <textarea name="Rezension" id="rezension" rows="20" cols="160" maxlength="800" required="required" placeholder="Schreiben Sie eine Kundenrezension" onkeyup="counter(this.value)" onkeydown="counter(this.value)"></textarea>
+                    <input type="submit" value="Speichern" />
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© Raphael Sacher, Jan-Niclas Bracht – 2021</p>
+    </footer>
+    <script>
+        let produkt = {
+            name: 'BAMBOOKEYS Tastatur',
+            alter_preis: 119.99,
+            preis: 98.99,
+            bild_url: '../img/bambookeys_keyboard.png',
+            max_anzahl: Infinity,
+            anzahl: 0,
+        };
+
+        document.getElementById("warenkorb-btn").addEventListener("click", () => {
+            addAnzahl();
+            zumWarenkorbHinzufuegen(produkt)
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Produkt 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <a href="uebersicht.html">
+                    <img alt="Logo" src="../img/logoV1.png">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <ul>
+                    <li class="current"><a href="uebersicht.html">Übersicht</a></li>
+                    <li><a href="produkte.html">Produkte</a></li>
+                    <li><a href="nachhatligkeit.html">Nachhaltigkeit</a></li>
+                    <li><a href="about.html">Über Uns</a></li>
+                    <li>
+                        <a id="warenkorb" href="warenkorb.html">
+                            <i class="fas fa-shopping-cart"></i> Warenkorb
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <section class="product-page">
+        <h1>Produktdetails</h1>
+        <div class="card-wrapper">
+            <div class="productdetail-card">
+                <!--Produkt Bild-->
+                <div class="product-picture">
+                    <img alt="Maus und Tastatur" src="../img/bambookeys_keyboard_and_mouse.png" style="width:100%">
+                </div>
+                <div class="product-content">
+                    <!--Titel-->
+                    <h2 class="product-title">BAMBOOKEYS Tastatur + Maus</h2>
+                    <!--Bewertung-->
+                    <div class="product-rating">
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                        <span class="fas fa-star"></span>
+                    </div>
+                    <!--Preis-->
+                    <p class="old-product-price">119,99 €</p>
+                    <p class="product-price">98,99 €</p>
+                    <!--Beschreibung-->
+                    <div class="product-detail">
+                        <h2>Artikel Infos: </h2>
+                        <p>Produktbeschreibung...</p>
+                        <p class="product-nachhaltigkeit">Mit dem Kauf dieses Produktes sparen Sie 2kg CO2!<br><span><a
+                                    href="nachhaltigkeit.html">Mehr erfahren</a></span></p>
+                        <ul>
+                            <li>Hersteller: <span>Bamboo Keys</span></li>
+                            <li>Marke: <span>Bamboo Keys</span></li>
+                            <li>Lieferdienst: <span>DHL</span></li>
+                            <li>Lieferung: <span>innerhalb 3 Tage</span></li>
+                            <li>Verfügbarkeit: <span>Auf Lager</span></li>
+                        </ul>
+                        <p>Anzahl: <input type="number" size="2" value="1"></p>
+                    </div>
+                    <!--In den Warenkorb Button-->
+                    <button type="button" class="warenkorb-button">In den Warenkorb</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>BAMBOOKEYS Online Shop 2021</p>
+    </footer>
+</body>
+
+</html>

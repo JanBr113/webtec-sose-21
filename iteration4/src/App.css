@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  /*Schriftart poppins mit 3 Alternativen*/
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: khaki;
+  background: linear-gradient(to right, khaki, rgb(231, 252, 193), khaki);
+}
+
+/* Gilt für alle Abschnitte */
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  margin-top: 1em;
+  font-size: 4em;
+  text-align: center;
+}
+
+table {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  background-color: #fffffffa;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: forestgreen;
+}
+
+a:hover {
+  color: yellowgreen;
+}
+
+/* Header & Footer */
+
+header,
+footer {
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.15);
+  background-color: #fffffffa;
+  overflow: hidden;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.blockquote-footer {
+  box-shadow: none;
+}
+
+.navbar-brand img {
+  width: 25rem;
+  position: relative;
+  transition: transform 2s ease;
+  transform: translateX(0px);
+}
+
+.navbar-brand img:hover {
+  transform: translateX(15px);
+}
+
+@media only screen and (max-width: 1199px) {
+  .navbar-brand img {
+    width: 100%;
+  }
+}
+
+.nav-item {
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: none;
+  color: forestgreen;
+  transition: text-shadow 1s ease;
+}
+
+.nav-item:hover {
+  text-shadow: 5px 5px 10px #777;
+}
+
+/* Übersicht */
+
+.card {
+  box-shadow: 10px 10px 15px silver;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  background-color: #fffffffa;
+  margin-bottom: 10px;
+}
+
+#impressumCard {
+  width: 18rem;
+}
+
+/* Warenkorb */
+
+.cart-button {
+  color: white;
+  background-color: forestgreen;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: large;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  height: 60px;
+}
+
+.cart-button:hover {
+  background-color: yellowgreen;
+  color: black;
+}
+
+button:disabled,
+button:disabled:hover,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+/* Produkt Details */
+
+.product-content {
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.product-picture {
+  display: flex;
+  width: 100%;
+  transition: transform 1s ease;
+  transform: scale(1);
+}
+
+.product-picture:hover {
+  transform: scale(1.1);
+}
+
+.product-title,
+thead {
+  font-size: x-large;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.product-price {
+  color: forestgreen;
+}
+
+.old-product-price {
+  color: red;
+  text-decoration: line-through;
+}
+
+.product-detail p {
+  font-size: 0.95rem;
+}
+
+.product-detail ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.product-detail ul li {
+  margin: 0;
+  list-style: none;
+}
+
+/* Star Rating */
+
+.on {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: orange;
+  font-size: x-large;
+}
+
+.off {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: gray;
+  font-size: x-large;
+}

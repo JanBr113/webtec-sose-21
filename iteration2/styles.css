@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    /*Schriftart poppins mit 3 Alternativen*/
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+    background: linear-gradient(to right, #fff, rgb(231, 252, 193), #fff);
+}
+
+
+/* Gilt für alle Abschnitte */
+
+section {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+figure {
+    transform: scale(0.9);
+}
+
+figure:hover {
+    transform: scale(1);
+}
+
+h1 {
+    margin-top: 1em;
+    font-size: 4em;
+    text-align: center;
+}
+
+table {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    background-color: khaki;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+}
+
+
+/*
+header,
+main,
+footer {
+    display: flex;
+    justify-content: center;
+}
+*/
+
+main {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellowgreen;
+}
+
+
+/* Header */
+
+header {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 80%;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.15);
+    background-color: khaki;
+}
+
+header a,
+td a {
+    color: forestgreen;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header #logo {
+    height: 100px;
+    position: relative;
+    transition: transform 2s ease;
+    transform: translateX(0px);
+    width: 100px;
+}
+
+header #logo:hover {
+    transform: translateX(15px);
+}
+
+
+/* Nagivation Bar */
+
+nav {
+    overflow: auto;
+}
+
+nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: forestgreen;
+    font-size: 30px;
+    border-right: 3px solid forestgreen;
+    text-shadow: none;
+    transition: text-shadow 1s ease;
+}
+
+nav a:hover {
+    text-shadow: 5px 5px 10px #777;
+}
+
+nav a:nth-last-child(2) {
+    border-right: none;
+}
+
+nav a:last-child {
+    border-right: none;
+    float: right;
+}
+
+.active {
+    text-decoration-line: underline;
+    color: yellowgreen;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 80%;
+    background-color: khaki;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Übersicht */
+
+.even-columns {
+    display: flex;
+    gap: 1em;
+}
+
+.even-columns>* {
+    width: 100%;
+}
+
+.column {
+    display: flex;
+}
+
+.card-wrapper {
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    background-color: khaki;
+}
+
+.productdetail-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    background-color: khaki;
+}
+
+
+/* Warenkorb */
+
+.warenkorb-button {
+    color: white;
+    background-color: forestgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: large;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    height: 60px;
+}
+
+.warenkorb-button:hover {
+    background-color: yellowgreen;
+    color: black;
+    font-weight: bolder;
+}
+
+
+/* Produkt Details */
+
+.product-content {
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.product-picture {
+    display: flex;
+    width: 100%;
+}
+
+.product-title,
+thead {
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.product-rating {
+    color: orange;
+}
+
+.product-price {
+    color: forestgreen;
+    font-size: large;
+    font-weight: bold;
+}
+
+.old-product-price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.product-detail p {
+    font-size: 0.95rem;
+}
+
+.product-detail ul {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.product-detail ul li {
+    margin: 0;
+    list-style: none;
+}
+
+.product-nachhaltigkeit span {
+    color: khaki;
+    text-decoration: underline;
+}
+
+.product-nachhaltigkeit {
+    background-color: forestgreen;
+    color: white;
+    padding: 0.4em;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    margin: 4px 2px;
+}
+
+
+/* Formular */
+
+form {
+    background-color: white;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: forestgreen;
+    color: white;
+    padding: 10px 100px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: yellowgreen;
+}
+
+input[type=reset] {
+    color: red;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/** Impressum **/
+
+.autor {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 100px;
+    background-color: rgba(172, 172, 172, 0.144);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 19px 10px 15px silver;
+}
+
+.autor ul li {
+    margin-top: 5px;
+    list-style: none;
+    text-align: center;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Warenkorb</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <section class="container">
+            <div id="logo">
+                <a href="startseite.html">
+                    <img alt="Logo" src="../img/logoV2.png" style="width:50%">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <a href="startseite.html"><i class="fa fa-fw fa-home"></i> Startseite</a>
+                <a href="kontakt.html"><i class="fa fa-fw fa-envelope"></i> Kontakt</a>
+                <a href="impressum.html"><i class="fa fa-fw fa-user"></i> Impressum</a>
+                <a class="active" href="warenkorb.html"><i class="fas fa-shopping-cart"></i>
+                    Warenkorb</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <h1>Warenkorb</h1>
+        <table class="container">
+            <thead>
+                <tr>
+                    <th style="width:20%">Bild</th>
+                    <th>Produkt</th>
+                    <th>Menge</th>
+                    <th>Stückpreis</th>
+                    <th>Gesamtpreis</th>
+                </tr>
+            </thead>
+            <tbody id="inhalt"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"></td>
+                    <td>
+                        <h2>Summe:</h2>
+                    </td>
+                    <td id="total-price" class="product-price"></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><button type="button" class="warenkorb-button">Jetzt Kaufen</button></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+    <footer>
+        <p>© Raphael Sacher, Jan-Niclas Bracht – 2021</p>
+    </footer>
+    <script>
+        document.body.onload = init;
+
+        function init() {
+            var tabelle = document.getElementById("inhalt");
+            let warenkorb = JSON.parse(localStorage.getItem('warenkorb'));
+            if (warenkorb) {
+                for (var i = 0; i < warenkorb.length; i++) {
+                    let produktIndex = i;
+                    // creates a table row
+                    var row = document.createElement("tr");
+
+                    // Create a <td> element and a text node, make the text
+                    // node the contents of the <td>, and put the <td> at
+                    // the end of the table row
+                    var cell = document.createElement("TD");
+                    // Produktbild
+                    var cellContent = document.createElement("IMG");
+                    cellContent.setAttribute("src", warenkorb[i].bild_url);
+                    cellContent.setAttribute("alt", warenkorb[i].name);
+                    cellContent.setAttribute("width", "300px");
+                    cell.appendChild(cellContent);
+                    row.appendChild(cell);
+
+                    // Produktname
+                    cell = document.createElement("TD");
+
+                    var newA = document.createElement("A");
+                    cellContent = document.createTextNode(warenkorb[i].name);
+                    newA.appendChild(cellContent)
+                    cell.appendChild(newA);
+                    row.appendChild(cell);
+
+                    // Menge
+                    cell = document.createElement("TD");
+
+                    cellContent = document.createElement("INPUT");
+                    cellContent.setAttribute("ID", ("menge" + produktIndex));
+                    cellContent.setAttribute("type", "number");
+                    cellContent.setAttribute("size", 1);
+                    cellContent.setAttribute("min", 1);
+                    cellContent.setAttribute("max", 9999);
+                    cellContent.setAttribute("value", warenkorb[i].anzahl);
+                    cell.appendChild(cellContent);
+                    row.appendChild(cell);
+                    cellContent.oninput = function() {
+                        warenkorb[produktIndex].anzahl = document.getElementById("menge" + produktIndex).value;
+                        localStorage.setItem('warenkorb', JSON.stringify(warenkorb));
+                        document.getElementById("gPreis" + produktIndex).innerHTML = ((warenkorb[produktIndex].preis) * (warenkorb[produktIndex].anzahl)).toFixed(2);
+                        totalPrice();
+                    };
+
+                    // Produkt entfernen
+                    cellContent = document.createElement("BUTTON");
+                    cellContent.style.backgroundColor = "transparent";
+                    cellContent.style.border = "none";
+                    cellContent.setAttribute("class", "fas fa-trash-alt");
+                    cell.appendChild(cellContent);
+                    row.appendChild(cell);
+                    cellContent.onclick = function() {
+                        warenkorb.splice(produktIndex, 1);
+                        localStorage.setItem('warenkorb', JSON.stringify(warenkorb));
+                        location.reload();
+                    };
+
+                    // Stückpreis
+                    cell = document.createElement("TD");
+                    cell.setAttribute("class", "product-price");
+                    cellContent = document.createTextNode(warenkorb[i].preis);
+                    cell.setAttribute("ID", "sPreis" + produktIndex);
+                    cell.appendChild(cellContent);
+                    row.appendChild(cell);
+
+                    tabelle.appendChild(row); // füge den Textknoten zum neu erstellten tr hinzu.
+
+                    // Gesamtpreis
+                    cell = document.createElement("TD");
+                    cell.setAttribute("class", "product-price");
+                    cellContent = document.createTextNode((warenkorb[i].preis * warenkorb[i].anzahl).toFixed(2));
+                    cell.setAttribute("ID", "gPreis" + produktIndex);
+                    cell.appendChild(cellContent);
+                    row.appendChild(cell);
+
+                    tabelle.appendChild(row); // füge den Textknoten zum neu erstellten tr hinzu.
+                }
+                totalPrice();
+            }
+        }
+
+        function totalPrice() {
+            let warenkorb = JSON.parse(localStorage.getItem('warenkorb'));
+            if (warenkorb) {
+                let total = 0;
+                for (var i = 0; i < warenkorb.length; i++) {
+                    total = total + parseFloat(document.getElementById("gPreis" + i).innerHTML);
+                };
+                document.getElementById("total-price").innerHTML = total.toFixed(2);
+            };
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>BAMBOOKEYS Online Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--Icons von FontAwesome-->
+    <script src="https://kit.fontawesome.com/469a75a7b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <section class="container">
+            <div id="logo">
+                <a href="startseite.html">
+                    <img alt="Logo" src="../img/logoV1.png">
+                </a>
+            </div>
+            <!--Navigation-->
+            <nav>
+                <a href="startseite.html"><i class="fa fa-fw fa-home"></i> Startseite</a>
+                <a class="active" href="kontakt.html"><i class="fa fa-fw fa-envelope"></i> Kontakt</a>
+                <a href="impressum.html"><i class="fa fa-fw fa-user"></i> Impressum</a>
+                <a href="warenkorb.html"><i class="fas fa-shopping-cart"></i> Warenkorb</a>
+            </nav>
+        </section>
+    </header>
+    <main>
+        
+        <h1>Kontakt</h1>
+        
+            <section class="container">
+                <form method="POST" action="verarbeite-kontakt.html">
+                    <fieldset>
+                        <label for="vorname">Vorname</label>
+                        <input type="text" id="vorname" name="Vorname" size="40" maxlength="40" placeholder="Dein Vorname" pattern="[a-zA-Z][a-zA-Z]+" title="Der Name muss mindestens 2 Buchstaben haben und darf keine Ziffern enthalten." />
+
+                        <label for="nachname">Nachname</label>
+                        <input type="text" id="nachname" name="Nachname" size="40" maxlength="40" placeholder="Dein Nachname" pattern="[a-zA-Z][a-zA-Z]+" title="Der Name muss mindestens 2 Buchstaben haben und darf keine Ziffern enthalten." />
+
+                        <label for="email">E-Mail Adresse*</label>
+                        <input type="email" id="email" name="email" size="40" maxlength="40" placeholder="Deine E-Mail Adresse" required="required" title="Bitte geben Sie eine gütlige E-Mail Adresse ein." />
+
+                        <label for="kdNr">Kundennummer</label>
+                        <input type="text" id="kdNr" name="Kundennummer" size="40" maxlength="40" placeholder="Deine Kundennummer" pattern="[0-9]{7}(p|[0-9])" />
+
+                        <label for="betreff">Betreff*</label>
+                        <input type="text" id="betreff" name="Betreff" size="40" maxlength="40" placeholder="Betreff eingeben" required="required" />
+
+                        <label for="kategorie">Kategorie</label>
+                        <select name="Kategorie" id="kategorie" size="1">
+                            <option value="keine_Auswahl">-- Bitte wählen --</option>
+                            <option value="Versand">Wann kommt mein Paket?</option>
+                            <option value="Retoure">Retoure</option>
+                            <option value="Verkauf">Fragen vor dem Kauf</option>
+                            <option value="Sonstiges">Sonstige Fragen</option>
+                        </select>
+
+
+                        <label for="beschreibung">Beschreibung*</label>
+                        <textarea id="beschreibung" name="Beschreibung" rows="15" cols="40" maxlength="400" required="required"></textarea> * Pflichtfelder
+                    </fieldset>
+
+                    <fieldset>
+                        <input type="reset" value="Formular löschen" />
+                        <input type="submit" value="Senden" />
+                    </fieldset>
+                </form>
+            </section>
+        
+    </main>
+    <footer>
+        <p>© Raphael Sacher, Jan-Niclas Bracht – 2021</p>
+    </footer>
+</body>
+
+</html>

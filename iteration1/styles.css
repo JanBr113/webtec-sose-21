@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    /*Schriftart poppins mit 3 Alternativen*/
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Gilt für alle Abschnitte */
+
+.container {
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    transform: scale(0.9);
+}
+
+img:hover {
+    transform: scale(1);
+}
+
+h1 {
+    margin-top: 1em;
+    font-size: 4em;
+    text-align: center;
+}
+
+
+/* Header */
+
+header {
+    padding-top: 25px;
+    min-height: 65px;
+    width: 100%;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.15);
+    background-color: khaki;
+}
+
+header a {
+    padding-top: 25px;
+    min-height: 65px;
+    text-decoration: none;
+    color: forestgreen;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+header li {
+    display: inline;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header #logo {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 30px;
+}
+
+header .current a {
+    border-bottom: 3px solid yellowgreen;
+}
+
+header a:hover {
+    color: yellowgreen;
+    font-weight: bolder;
+}
+
+/* Footer */
+footer {
+    padding-top: 25px;
+    min-height: 65px;
+    width: 100%;
+    background-color: khaki;
+    text-align: center;
+}
+
+
+/* Übersicht */
+
+#warenkorb {
+    font-weight: bolder;
+    border-bottom: 3px dotted yellowgreen;
+    margin-left: 5em;
+}
+
+#uebersicht {
+    min-height: 300px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    padding: 0 1em;
+    max-width: 50%;
+}
+
+.card-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 40em;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.productdetail-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.warenkorb-button {
+    color: white;
+    background-color: forestgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: large;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+.warenkorb-button:hover {
+    background-color: yellowgreen;
+    color: black;
+    font-weight: bolder;
+}
+
+
+/* Produkt Details */
+
+.product-content {
+    padding: 2rem 1rem;
+    text-align: left;
+}
+
+.product-picture {
+    display: flex;
+    width: 100%;
+}
+
+.product-title,
+thead {
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.product-rating {
+    color: orange;
+}
+
+.product-price {
+    color: forestgreen;
+    font-size: large;
+    font-weight: bold;
+}
+
+.old-product-price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.product-detail p {
+    font-size: 0.95rem;
+}
+
+.product-detail ul {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.product-detail ul li {
+    margin: 0;
+    list-style: none;
+}
+
+.product-nachhaltigkeit span a {
+    color: khaki;
+    text-decoration: underline;
+}
+
+.product-nachhaltigkeit {
+    background-color: forestgreen;
+    color: white;
+    padding: 0.4em;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    margin: 4px 2px;
+}
